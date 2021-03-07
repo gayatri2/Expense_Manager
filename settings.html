@@ -36,6 +36,58 @@
             </div>
           </nav>
 
-        <h1>SETTINGS</h1>
+        
+<form class="form-inline"action="/budget" method="POST">
+  <div class="form-group mb-2">
+    
+    <input type="text" readonly class="form-control-plaintext" id="" value="Enter your budget">
+  </div>
+  <div class="form-group mx-sm-3 mb-2">
+   
+    <input type="number" name="budget" class="form-control"  id="" placeholder="Budget">
+  </div>
+  <button type="submit" class="btn btn-primary mb-2">Submit</button>
+</form>
+<!--radio buttons-->
+<form  action="/expenditure" method="POST">
+<h5> Categories</h5>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="optradio" id="exampleRadios1" value="option1" checked>
+  <label class="form-check-label" for="exampleRadios1">
+    Default radio
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="optradio" id="exampleRadios2" value="option2">
+  <label class="form-check-label" for="exampleRadios2">
+    Second default radio
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="optradio" id="exampleRadios2" value="option2">
+  <label class="form-check-label" for="exampleRadios2">
+    Third default radio
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="optradio" id="exampleRadios2" value="option2">
+  <label class="form-check-label" for="exampleRadios2">
+    Fourth default radio
+  </label>
+</div>
+
+<!--item, cost-->
+
+  <div class="form-group">
+    <label for="formGroupExampleInput">Enter Item</label>
+    <input type="text" name="item" class="form-control" id="" placeholder="Item Name">
+  </div>
+  <div class="form-group">
+    <label for="formGroupExampleInput2">Enter Cost</label>
+    <input type="number" name="cost"class="form-control" id="" placeholder="Cost">
+  </div>
+  <button type="submit" class="btn btn-primary mb-2">Submit</button>
+</form>
+      
     </body>
 </html>
