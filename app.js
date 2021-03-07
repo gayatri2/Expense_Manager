@@ -33,7 +33,10 @@ app.get("/dashboard", function (req,res){
     res.sendFile(__dirname+"/dashboard.html")});
 app.get("/settings", function (req,res){
       res.sendFile(__dirname+"/settings.html")});
+app.get("/logout",function(req,res){
 
+  res.redirect("/");
+});
 
  
 app.post("/register",function(req,res){
