@@ -282,7 +282,7 @@ app.post("/updatecontents",function(req,res)
       console.log('All good!')
     }
   });
-  User.updateOne({email:username},{budget:b1},function(err){
+  User.updateOne({email:email},{budget:b1},function(err){
     if(err){
          console.log(err);
        }
