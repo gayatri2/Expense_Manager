@@ -12,7 +12,7 @@ app.set('view engine', 'ejs');
 const mongoose=require('mongoose');
 const encrypt = require("mongoose-encryption");
 global.email="";
-global.b1="";
+global.b1=0;
 global.flag=0;
 mongoose.connect('mongodb+srv://g3:g3@cluster0.9owf4.mongodb.net/userDB',{ useNewUrlParser: true, useUnifiedTopology: true } ); 
 
@@ -60,15 +60,37 @@ app.get("/home", function (req,res){
   }
 });
   
-app.get("/dashboard", function (req,res){
+/*app.get("/dashboard", function (req,res){
     if(flag===1)
     {
-      res.sendFile(__dirname+"/dashboard.html");
+      Expense.find({ emai : email }, function(err, results) {
+        if (err) {
+          console.log(err);
+        } else {
+          res.render("dashboard",{budget:b1,results:results});
+          console.log(results);
+        }
+      });
+      res.render("dashboard",{budget:b1});
     }
     else
     {
       res.sendFile(__dirname+"/index.html");
     }
+});*/
+app.get("/dashboard", function(req, res){
+  if(flag==1)
+  {   
+    Expense.find({ email: email }, function(err, results) {
+        if (err) {
+          console.log(err);
+        } else {
+          console.log(results);
+          res.render('dashboard',{budget:b1,results:results});
+        }
+      });
+  }
+  else{res.redirect('/')}
 });
 app.get("/settings", function (req,res){
     if(flag===1)
@@ -79,6 +101,7 @@ app.get("/settings", function (req,res){
     {
       res.sendFile(__dirname+"/index.html");  
     }
+   
 });
 app.get("/logout",function(req,res){
   if(flag===1)
@@ -105,6 +128,7 @@ app.post("/register",function(req,res){
       console.log(err);
     } else {
       flag=1;
+      b1=0;
       res.sendFile(__dirname+"/home.html")      
 
     }
@@ -121,6 +145,7 @@ app.post("/login",function(req,res){
 
       if (foundUser) {
         if (foundUser.password === password) {
+          b1=foundUser.budget;
           flag=1;
           res.sendFile(__dirname+"/home.html")
         }
@@ -146,7 +171,58 @@ app.post("/budget",function(req,res){
   res.redirect("/settings");
  
 });
-
+app.post("/checkbox",function(req,res){
+  var id = req.body.checkbox;
+  Expense.findOne({_id: id}, function(err, foundUser){
+    if (err) {
+      console.log(err);
+    } else {
+      if (foundUser) {
+        if (foundUser.delete === false) {
+          b1 = Number(b1)+Number(foundUser.cost);
+          Expense.updateOne({_id:id},{delete:1},function(err){
+            if(err){
+                 console.log(err);
+               }
+            else{
+                 console.log('All good!')
+               }
+             });
+             User.updateOne({email:email},{budget:b1},function(err){
+              if(err){
+                   console.log(err);
+                 }
+              else{
+                   console.log('All good!')
+                 }
+               });
+               res.redirect('/dashboard');
+        }
+        else{
+          b1 = Number(b1)-Number(foundUser.cost);
+          Expense.updateOne({_id:id},{delete:false},function(err){
+            if(err){
+                 console.log(err);
+               }
+            else{
+                 console.log('All good!')
+               }
+             });
+          
+          User.updateOne({email:email},{budget:b1},function(err){
+            if(err){
+                 console.log(err);
+               }
+            else{
+                 console.log('All good!')
+               }
+             });
+             res.redirect('/dashboard');
+        }
+      }
+    }
+  });
+})
 app.post("/expenditure",function(req,res){
   const radio=req.body.optradio;
   const item=req.body.item;

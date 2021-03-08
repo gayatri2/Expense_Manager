@@ -92,7 +92,18 @@ input {
 {
     color:#9896f1;
 }
+#myDIV
+{
+    display:none;
+}
+input[type=checkbox]:checked + label.strikethrough{
+    text-decoration: line-through;
+  }
+.strike{
+    text-decoration: line-through;
+  }
 /*nav-bar*/
 .items{
     margin-left: 65%;
 }
+
