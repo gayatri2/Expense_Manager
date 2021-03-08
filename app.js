@@ -258,6 +258,52 @@ app.post("/expenditure",function(req,res){
   });
 
 });
+/*app.get("/updatecontents",function(req,res){
+  res.sendFile(__dirname+"/settings.html");
+});*/
+app.post("/updatecontents",function(req,res)
+{
+  console.log(req.body.inametobe);
+  console.log(req.body.updatename);
+  console.log(req.body.updatecost);
+  const toupdate=req.body.inametobe;
+  const newname=req.body.updatename;
+  const newcost=req.body.updatecost;
+  
+  Expense.findOne({email: email,item:toupdate},function(err, foundUser){
+    if(err)
+    {
+      console.log(err);
+    }
+    else
+    {
+      var bud=foundUser.cost;
+      b1 = Number(b1)+Number(newcost)-Number(bud);
+      console.log('All good!')
+    }
+  });
+  User.updateOne({email:username},{budget:b1},function(err){
+    if(err){
+         console.log(err);
+       }
+    else{
+         console.log('All good!')
+       }
+     });
+  Expense.updateOne({email: email,item:toupdate},{item:newname,cost:newcost}, function(err, foundUser){
+    if(err)
+    {
+      console.log(err);
+    }
+    else
+    {
+      console.log('All good!')
+    }
+  });
+  res.redirect('/dashboard');
+
+      });
+
 app.listen(3000, function() {
     console.log("Server started on port 3000");
   });

@@ -5,13 +5,14 @@
     <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js'></script>
     <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" type="text/css"href=css/bootstrap.css">
+   
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
-    </head>
+<link rel="stylesheet" href="css/styles.css">    
+</head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
@@ -36,11 +37,11 @@
               </div>
             </div>
           </nav>
-        <h1>DASHBOARD</h1>
-        <h1>Budget is ₹<%= b1 %> </h1>
-        <button type="button" href="/settings" class="btn-primary btn-info btn-lg"><a href="/settings">Add Expenditure</a></button>
         
-        <button onclick="myFunction()">View Expenses</button>
+        <h2 class="budget2">Budget is ₹<%= b1 %> </h1>
+        <button type="button" href="/settings" class="btn btn-light "><a href="/settings">Add Expenditure</a></button>
+        
+        <button onclick="myFunction()"class="btn btn-light" >View Expenses</button>
         <div id="myDIV">
              <% results.forEach(function(item){ %>
             <form action="/checkbox" method="POST">
@@ -72,7 +73,46 @@
             }
           }
           </script>
-       
+
+       <button onclick="myFunction1()" class="btn btn-light">Update Expenses</button>
+       <div id="myDIV1" class="container">
+        <!--<form action="/updatecontents" action="POST">
+          <input type="text" name="inametobe" placeholder="Item name to be updated" class="border-bottom border-primary"autocomplete="off">
+          <input type="text" name="updatename" placeholder="Updated item name" class="border-bottom border-primary"autocomplete="off">
+          <input type="text" name="updatecost" placeholder="Updated cost" class="border-bottom border-primary"autocomplete="off">
+          <input type="submit" value="Update" class="btn btn-primary btn-block mb-3">
+        </form>-->
+        <form action='/updatecontents' method="post">
+          <div class="form-group">
+               
+                <input type="text" name="inametobe" class="form-control" id=""  placeholder="Item Name to be updated">
+            
+              </div>
+              <div class="form-group">
+                
+                <input type="text" name="updatename" class="form-control" id=""  placeholder="Updated Name">
+            
+              </div>
+              <div class="form-group">
+                
+                <input type="number" name="updatecost" class="form-control" id="" placeholder="Updated Cost">
+              </div>
+              
+              <button type="submit" class="btn btn-primary">Update</button>
+            </form>
+
+       </div>
+
+       <script>
+        function myFunction1() {
+          var x = document.getElementById("myDIV1");
+          if (x.style.display === "none") {
+            x.style.display = "block";
+          } else {
+            x.style.display = "none";
+          }
+        }
+        </script>
         
     </body>
 </html>
