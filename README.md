@@ -33,8 +33,11 @@ The log out button logs the user out of the website.
 
 ![image](https://user-images.githubusercontent.com/56043146/110336516-f28a0980-804a-11eb-9112-933b8c68242f.png)
 ![image](https://user-images.githubusercontent.com/56043146/110336546-f87fea80-804a-11eb-9112-b55d5279db2d.png)
-![image](https://user-images.githubusercontent.com/56043146/110336560-fd449e80-804a-11eb-807d-513241d7cfd5.png)
-![image](https://user-images.githubusercontent.com/56043146/110336592-033a7f80-804b-11eb-8455-8ddca868de45.png)
+![image](https://user-images.githubusercontent.com/56043146/110420003-66b2c480-80c0-11eb-8ee5-2b9e1713d00a.png)
+
+![image](https://user-images.githubusercontent.com/56043146/110420025-70d4c300-80c0-11eb-8337-fd300e60f23e.png)
+![image](https://user-images.githubusercontent.com/56043146/110420049-821dcf80-80c0-11eb-9bdc-0c26fd30c35f.png)
+
 
 
 
