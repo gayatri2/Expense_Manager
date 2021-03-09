@@ -179,7 +179,7 @@ app.post("/checkbox",function(req,res){
     } else {
       if (foundUser) {
         if (foundUser.delete === false) {
-          b1 = Number(b1)+Number(foundUser.cost);
+          b1 = Number(b1)-Number(foundUser.cost);
           Expense.updateOne({_id:id},{delete:1},function(err){
             if(err){
                  console.log(err);
@@ -199,7 +199,7 @@ app.post("/checkbox",function(req,res){
                res.redirect('/dashboard');
         }
         else{
-          b1 = Number(b1)-Number(foundUser.cost);
+          b1 = Number(b1)+Number(foundUser.cost);
           Expense.updateOne({_id:id},{delete:false},function(err){
             if(err){
                  console.log(err);

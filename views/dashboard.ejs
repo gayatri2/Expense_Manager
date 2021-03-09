@@ -42,11 +42,12 @@
         <button type="button" href="/settings" class="btn btn-light "><a href="/settings">Add Expenditure</a></button>
         
         <button onclick="myFunction()"class="btn btn-light" >View Expenses</button>
+        <button onclick="myFunction1()" class="btn btn-light">Update Expenses</button>
         <div id="myDIV">
              <% results.forEach(function(item){ %>
             <form action="/checkbox" method="POST">
               <div class="form-group ">
-              <div class="col-md-5">
+              <div class="col-md-5 container">
                 <div class="checkbox">
                   <input id="strike"type="checkbox"name="checkbox"value="<%=item._id%>"onChange="this.form.submit()">
 
@@ -74,7 +75,7 @@
           }
           </script>
 
-       <button onclick="myFunction1()" class="btn btn-light">Update Expenses</button>
+       
        <div id="myDIV1" class="container">
         <!--<form action="/updatecontents" action="POST">
           <input type="text" name="inametobe" placeholder="Item name to be updated" class="border-bottom border-primary"autocomplete="off">
@@ -83,7 +84,7 @@
           <input type="submit" value="Update" class="btn btn-primary btn-block mb-3">
         </form>-->
         <form action='/updatecontents' method="post">
-          <div class="form-group">
+          <div class="form-group topone">
                
                 <input type="text" name="inametobe" class="form-control" id=""  placeholder="Item Name to be updated">
             
@@ -97,8 +98,9 @@
                 
                 <input type="number" name="updatecost" class="form-control" id="" placeholder="Updated Cost">
               </div>
-              
+              <div class="updatebutton">
               <button type="submit" class="btn btn-primary">Update</button>
+            </div>
             </form>
 
        </div>

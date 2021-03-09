@@ -98,19 +98,39 @@ input {
 }
 #myDIV1
 {
+    margin-top: 3%;
     display:none;
 }
+.topone{
+    padding-top: 3%;
+}
+.updatebutton{
+    padding-bottom: 3%;
+}
+.checkbox{
+    margin-top: 3%;
+}
+.strikethrough{
+    margin-top: 2%;
+
+  }
 input[type=checkbox]:checked + label.strikethrough{
     text-decoration: line-through;
+    margin-top: 3%;
+    margin-bottom: 3%;
   }
 .strike{
     text-decoration: line-through;
+    margin-top: 3%;
+    margin-bottom: 3%;
   }
 /*nav-bar*/
 .items{
     margin-left: 65%;
 }
-
+.top{
+    padding-top: 3%;
+}
 
 .homeh1{
     margin-top: 15%;
@@ -127,15 +147,8 @@ input[type=checkbox]:checked + label.strikethrough{
     margin-top:5%;
     margin-left:15%;
 }
-.content{
-    margin-top:8%;
-}
-.itemcost{
-    margin-top:3%;
-}
-.radioitem{
-    margin-top:2.5%;
-}
+
+
 .h5cat{
     margin-top:2%;
 }
