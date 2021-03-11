@@ -2,8 +2,8 @@
 
 This is a simple expense manager project.
 
-The technologies used in this project are: Html, Css, Javascript, Mongo Db.
-The dependencies are: Node js, Express js, mongoose.
+Technologies used: HTML, CSS, Javascript, Mongo Db.
+Dependencies: Node js, Express js, mongoose.
 
 In this project, initially, there is an authentication system.
 This system, has two parts, login and register.
