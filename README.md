@@ -25,10 +25,15 @@ c)Update expense lets the user to update item name as well as its cost. When cos
 
 The log out button logs the user out of the website.
 
+->Landing Page
 ![image](https://user-images.githubusercontent.com/56043146/116801681-a37fc280-ab29-11eb-8ea1-3df5ca83d905.png)
 
+->Login Page
 ![image](https://user-images.githubusercontent.com/56043146/116801689-ae3a5780-ab29-11eb-9fae-ce347a6403bb.png)
+
+->Register Page
 ![image](https://user-images.githubusercontent.com/56043146/116801691-b7c3bf80-ab29-11eb-9e36-482615344f3b.png)
+
 ![image](https://user-images.githubusercontent.com/56043146/116801701-d033da00-ab29-11eb-9db6-dcc4366a5c51.png)
 ![image](https://user-images.githubusercontent.com/56043146/116801706-dd50c900-ab29-11eb-860d-8846a1a4fab4.png)
 ![image](https://user-images.githubusercontent.com/56043146/116801861-513fa100-ab2b-11eb-8c56-4eb5c8240159.png)
