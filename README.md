@@ -45,7 +45,8 @@ The log out button logs the user out of the website.
 
 ![image](https://user-images.githubusercontent.com/56043146/116801706-dd50c900-ab29-11eb-860d-8846a1a4fab4.png)
 ![image](https://user-images.githubusercontent.com/56043146/116802239-fc9e2500-ab2e-11eb-8e58-f4b129185710.png)
-![image](https://user-images.githubusercontent.com/56043146/116802254-12134f00-ab2f-11eb-8801-0c5b199c537e.png)
+![image](https://user-images.githubusercontent.com/56043146/116803333-142bdc80-ab34-11eb-9f72-57cfe18f63e6.png)
+
 
 ->Settings Page
 
