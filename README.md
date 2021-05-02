@@ -26,22 +26,28 @@ c)Update expense lets the user to update item name as well as its cost. When cos
 The log out button logs the user out of the website.
 
 ->Landing Page
+
 ![image](https://user-images.githubusercontent.com/56043146/116801681-a37fc280-ab29-11eb-8ea1-3df5ca83d905.png)
 
 ->Login Page
+
 ![image](https://user-images.githubusercontent.com/56043146/116801689-ae3a5780-ab29-11eb-9fae-ce347a6403bb.png)
 
 ->Register Page
+
 ![image](https://user-images.githubusercontent.com/56043146/116801691-b7c3bf80-ab29-11eb-9e36-482615344f3b.png)
 
 ->Home Page
+
 ![image](https://user-images.githubusercontent.com/56043146/116801701-d033da00-ab29-11eb-9db6-dcc4366a5c51.png)
 
 ->Dashboard Page
+
 ![image](https://user-images.githubusercontent.com/56043146/116801706-dd50c900-ab29-11eb-860d-8846a1a4fab4.png)
-![image](https://user-images.githubusercontent.com/56043146/116801867-67e5f800-ab2b-11eb-8b44-d636ea02d2a8.png)
-![image](https://user-images.githubusercontent.com/56043146/116801871-7502e700-ab2b-11eb-9a83-cf5ccb1fc4c3.png)
+![image](https://user-images.githubusercontent.com/56043146/116802239-fc9e2500-ab2e-11eb-8e58-f4b129185710.png)
+![image](https://user-images.githubusercontent.com/56043146/116802254-12134f00-ab2f-11eb-8801-0c5b199c537e.png)
 
 ->Settings Page
+
 ![image](https://user-images.githubusercontent.com/56043146/116801861-513fa100-ab2b-11eb-8c56-4eb5c8240159.png)
 
