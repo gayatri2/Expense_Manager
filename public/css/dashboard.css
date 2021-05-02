@@ -1,0 +1,49 @@
+body{
+  
+    background: url("../images/dashboard2.jpg");
+    /* Full height */
+    height: 100%; 
+        
+    /* Center and scale the image nicely for full length and width bg image even for responsive*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+   
+  }
+  .navbar-brand{
+    margin-top:-33%;
+  }
+  .h1_b{
+    color:white;
+  
+  font-size: 4.5rem;
+  font-weight: 800;
+  margin-left: 30%;
+  }
+  .ejsbut{
+    margin-top: 5%;
+    margin-left: 35%;
+    
+  }
+  .white{
+    color:white;
+  }
+  #myDIV{
+    display: none;
+    color:black;
+    font-weight: 1000;
+    font-size: large;
+    margin-left: 45%;
+  }
+  #myDIV1{
+    display: none;
+    
+  }
+  input[type=checkbox]:checked + label.strikethrough{
+    text-decoration: line-through;
+  }
+  .striked{
+    text-decoration: line-through;
+    
+  }

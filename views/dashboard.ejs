@@ -1,120 +1,120 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css'>
-    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js'></script>
-    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-   
+<head>
+<!-- basis instructions given by user. Not displayed on webpage -->
+<link rel = "stylesheet" type = "text/css" href = "css/bootstrap.css">
+<link rel = "stylesheet" type = "text/css" href = "css/dashboard.css">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="css/styles.css">    
+<title>Dashboard</title>
 </head>
-    <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="/home">EXPENSE MANAGER</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse items" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/dashboard">Dashboard</a>
-                      </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/settings">Settings</a>
-                  </li>
-                  
-                  <li class="nav-item">
-                    <a class="nav-link" href="/logout">Log Out</a>
-                  </li>
-                  
-                </ul>
-              </div>
-            </div>
-          </nav>
+<body>
+
+
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="/home" class="navbar-brand">
+          <img alt="logo" src="/Images/logo1.png"
+          width=150" height="120">
+       </a>
+      </div>
+  
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         
-        <h2 class="budget2">Budget is ₹<%= b1 %> </h1>
-        <button type="button" href="/settings" class="btn btn-light "><a href="/settings">Add Expenditure</a></button>
-        
-        <button onclick="myFunction()"class="btn btn-light" >View Expenses</button>
-        <button onclick="myFunction1()" class="btn btn-light">Update Expenses</button>
-        <div id="myDIV">
-             <% results.forEach(function(item){ %>
-            <form action="/checkbox" method="POST">
-              <div class="form-group ">
-              <div class="col-md-5 container">
-                <div class="checkbox">
-                  <input id="strike"type="checkbox"name="checkbox"value="<%=item._id%>"onChange="this.form.submit()">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/dashboard">Dashboard</a></li>
 
-                  <%if(item.delete === true){ %>
-                      <label for="packers" class="strike"><p><%= item.category%> <%= item.item%> <%= item.cost%></p></label>
-                    <% }else{%>
-                    <label for="packers" class="strikethrough"><p><%= item.category%> <%= item.item%> <%= item.cost%></p></label>
-                      
-                    <%}%>
-                </div>
-             </div>
-            </div>
-          </form>
-          <%})%>
-        </div>
+          <li><a href="/settings">Settings</a></li>
+          <li><a href="/signout">Signout</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+  <div class="container">
+  <h1 class="h1_b">Budget is ₹<%= budget %> </h1>
+  <button type="button" href="/settings" class="btn btn-warning btn-lg ejsbut"><a class="white" href="/settings">Add Expenditure</a></button>
+  <button type="button" onclick="myFunction()" class="btn btn-warning btn-lg ejsbut">Display Expenses</button>
 
-        <script>
-          function myFunction() {
-            var x = document.getElementById("myDIV");
-            if (x.style.display === "none") {
-              x.style.display = "block";
-            } else {
-              x.style.display = "none";
-            }
-          }
-          </script>
+  <div id="myDIV">
+ <% results.forEach(function(item){ %>
+  <form action='/checkbox' method="post">
+  <div class="form-group ">
+    <div class="col-lg-12">
+      
+          <input id="strike" type="checkbox" value="<%=item._id %>" name='checkbox' onchange="this.form.submit()">
+          <%if(item.delete===true){%> 
+            <label for="packers" class="striked"><p><%= item.category%> <%= item.item%> ₹<%= item.cost%></p></label>
+           <%}else{%>   
+            <label for="packers" class="strikethrough"><p><%= item.category%> <%= item.item%> ₹<%= item.cost%></p></label>
+            <%}%> 
 
+     </div>
+</div>
+</form>
+    
+    <%})%> 
+  </div>
+  </div>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myDIV");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+    </script>
+  <div class="container"><button type="button" onclick="myFunction1()" class="btn btn-warning btn-lg ejsbut">Update Expenses</button></div>
+  <div id="myDIV1" class="container">
+    
+    
+   <!--<form action="/updatecontents" action="POST">
+     <input type="text" name="inametobe" placeholder="Item name to be updated" class="border-bottom border-primary"autocomplete="off">
+     <input type="text" name="updatename" placeholder="Updated item name" class="border-bottom border-primary"autocomplete="off">
+     <input type="text" name="updatecost" placeholder="Updated cost" class="border-bottom border-primary"autocomplete="off">
+     <input type="submit" value="Update" class="btn btn-primary btn-block mb-3">
+   </form>-->
+   <form action='/updatecontents' method="post">
+     <div class="form-group">
+          
+           <input type="text" name="inametobe" class="form-control" id=""  placeholder="Item Name to be updated">
        
-       <div id="myDIV1" class="container">
-        <!--<form action="/updatecontents" action="POST">
-          <input type="text" name="inametobe" placeholder="Item name to be updated" class="border-bottom border-primary"autocomplete="off">
-          <input type="text" name="updatename" placeholder="Updated item name" class="border-bottom border-primary"autocomplete="off">
-          <input type="text" name="updatecost" placeholder="Updated cost" class="border-bottom border-primary"autocomplete="off">
-          <input type="submit" value="Update" class="btn btn-primary btn-block mb-3">
-        </form>-->
-        <form action='/updatecontents' method="post">
-          <div class="form-group topone">
-               
-                <input type="text" name="inametobe" class="form-control" id=""  placeholder="Item Name to be updated">
-            
-              </div>
-              <div class="form-group">
-                
-                <input type="text" name="updatename" class="form-control" id=""  placeholder="Updated Name">
-            
-              </div>
-              <div class="form-group">
-                
-                <input type="number" name="updatecost" class="form-control" id="" placeholder="Updated Cost">
-              </div>
-              <div class="updatebutton">
-              <button type="submit" class="btn btn-primary">Update</button>
-            </div>
-            </form>
+         </div>
+         <div class="form-group">
+           
+           <input type="text" name="updatename" class="form-control" id=""  placeholder="Updated Name">
+       
+         </div>
+         <div class="form-group">
+           
+           <input type="number" name="updatecost" class="form-control" id="" placeholder="Updated Cost">
+         </div>
+         
+         <button type="submit" class="btn btn-primary">Update</button>
+       </form>
 
-       </div>
+  </div>
 
-       <script>
-        function myFunction1() {
-          var x = document.getElementById("myDIV1");
-          if (x.style.display === "none") {
-            x.style.display = "block";
-          } else {
-            x.style.display = "none";
-          }
-        }
-        </script>
-        
-    </body>
-</html>
+  <script>
+   function myFunction1() {
+     var x = document.getElementById("myDIV1");
+     if (x.style.display === "none") {
+       x.style.display = "block";
+     } else {
+       x.style.display = "none";
+     }
+   }
+   </script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </body>
+  </html>
