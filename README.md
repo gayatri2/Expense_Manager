@@ -1,7 +1,7 @@
 This is a budget manager project.
 
-The technologies used in this project are: Html, Css, Javascript, Mongo Db.
-The dependencies are: Node js, Express js, mongoose.
+Technologies used: HTML, CSS, Javascript, Mongo DB.
+Dependencies: Node js, Express js, mongoose.
 
 In this project, initially, there is an authentication system.
 This system, has two parts, login and register.
@@ -25,28 +25,30 @@ c)Update expense lets the user to update item name as well as its cost. When cos
 
 The log out button logs the user out of the website.
 
+->Landing Page
 
-![image](https://user-images.githubusercontent.com/56025143/110335467-e3568c00-8049-11eb-96ff-63f81b7c1d15.png)
-Landing Page
+![image](https://user-images.githubusercontent.com/56043146/116801681-a37fc280-ab29-11eb-8ea1-3df5ca83d905.png)
 
-![image](https://user-images.githubusercontent.com/56025143/110335636-1567ee00-804a-11eb-9dba-251917eab9b2.png)
-Login Page
+->Login Page
 
-![image](https://user-images.githubusercontent.com/56025143/110335768-38929d80-804a-11eb-9dcb-9dd6c3899472.png)
-Register page
+![image](https://user-images.githubusercontent.com/56043146/116801689-ae3a5780-ab29-11eb-9fae-ce347a6403bb.png)
 
-![image](https://user-images.githubusercontent.com/56025143/110335896-58c25c80-804a-11eb-9b6a-334db438bb29.png)
-Home Page
+->Register Page
 
-![image](https://user-images.githubusercontent.com/56025143/110336026-798ab200-804a-11eb-8e91-275cb88ea76c.png)
-Dashboard 1
+![image](https://user-images.githubusercontent.com/56043146/116801691-b7c3bf80-ab29-11eb-9e36-482615344f3b.png)
 
-![image](https://user-images.githubusercontent.com/56025143/110336150-9626ea00-804a-11eb-8f39-b5545876c4b0.png)
-Dashboard 2
+->Home Page
 
-![image](https://user-images.githubusercontent.com/56025143/110336238-adfe6e00-804a-11eb-8021-7a98c8c479fa.png)
-Dashboard 3
+![image](https://user-images.githubusercontent.com/56043146/116801701-d033da00-ab29-11eb-9db6-dcc4366a5c51.png)
 
-![image](https://user-images.githubusercontent.com/56025143/110336310-be164d80-804a-11eb-8beb-ce78ea586278.png)
-Settings Page
+->Dashboard Page
+
+![image](https://user-images.githubusercontent.com/56043146/116801706-dd50c900-ab29-11eb-860d-8846a1a4fab4.png)
+![image](https://user-images.githubusercontent.com/56043146/116802239-fc9e2500-ab2e-11eb-8e58-f4b129185710.png)
+![image](https://user-images.githubusercontent.com/56043146/116803333-142bdc80-ab34-11eb-9f72-57cfe18f63e6.png)
+
+
+->Settings Page
+
+![image](https://user-images.githubusercontent.com/56043146/116801861-513fa100-ab2b-11eb-8c56-4eb5c8240159.png)
 
