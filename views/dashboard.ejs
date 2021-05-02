@@ -43,7 +43,7 @@
   <button type="button" href="/settings" class="btn btn-warning btn-lg ejsbut"><a class="white" href="/settings">Add Expenditure</a></button>
   <button type="button" onclick="myFunction()" class="btn btn-warning btn-lg ejsbut">Display Expenses</button>
 
-  <div id="myDIV">
+  <div id="myDIV" class="container">
  <% results.forEach(function(item){ %>
   <form action='/checkbox' method="post">
   <div class="form-group ">
@@ -74,7 +74,7 @@
     }
     </script>
   <div class="container"><button type="button" onclick="myFunction1()" class="btn btn-warning btn-lg ejsbut">Update Expenses</button></div>
-  <div id="myDIV1" class="container">
+  <div id="myDIV1">
     
     
    <!--<form action="/updatecontents" action="POST">
@@ -86,20 +86,20 @@
    <form action='/updatecontents' method="post">
      <div class="form-group up">
           
-           <input type="text" name="inametobe" class="form-control" id="" style="width:350px;" placeholder="Item Name to be updated">
+           <input type="text" name="inametobe" class="form-control head" id="" style="width:320px;" placeholder="Item Name to be updated">
        
          </div>
-         <div class="form-group">
+         <div class="form-group up">
            
-           <input type="text" name="updatename" class="form-control" id="" style="width:350px;" placeholder="Updated Name">
+           <input type="text" name="updatename" class="form-control" id="" style="width:320px;" placeholder="Updated Name">
        
          </div>
-         <div class="form-group">
+         <div class="form-group up">
            
-           <input type="number" name="updatecost" class="form-control" id="" style="width:350px;" placeholder="Updated Cost">
+           <input type="number" name="updatecost" class="form-control" id="" style="width:320px;" placeholder="Updated Cost">
          </div>
          
-         <button type="submit" class="btn btn-primary">Update</button>
+         <button type="submit" class="btn btn-primary up">Update</button>
        </form>
 
   </div>
