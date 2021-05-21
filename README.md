@@ -1,6 +1,6 @@
 This is a budget manager project.
 
-Technologies used: HTML, CSS, Javascript, Mongo DB.
+Technologies used: HTML, CSS, Javascript, Mongo DB. <br />
 Dependencies: Node js, Express js, mongoose.
 
 In this project, initially, there is an authentication system.
